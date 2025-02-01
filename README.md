@@ -28,7 +28,7 @@ Or random: cs16:ammo, cs16:rifle, cs16:smg,cs16:pistol\
 ## Unitialized weapon
 Mainly used for easying the crafting recipe.\
 data example of an unitialized gun: music_disc_5[minecraft:item_model="cs16:gun/m4a1",minecraft:custom_data={gun:{id:21,uid:-1}}]\
-general data music_disc_5[minecraft:item_model=<gun model>,minecraft:custom_data={gun:{id:<gun id>,uid:-1}}]\
+general data music_disc_5[minecraft:item_model=<gun_model>,minecraft:custom_data={gun:{id:<gun_id>,uid:-1}}]\
 the item_model component is optional
 
 ## CONFIGURATIONS:
