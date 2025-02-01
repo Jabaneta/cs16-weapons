@@ -17,12 +17,19 @@ Damage scaling on guns removed( the player health was seen as from 0..100 instea
 
 ### Loot Tables:
 Guns are separated by type and you can get one by typing:
-loot give @s cs16:gun/<gun_type>/<gun_name>
+- loot give @s cs16:gun/<gun_type>/<gun_name>
+- eg. loot give @s cs16:gun/rifle/m4a1
 
 Getting ammo:
 loot give @s loot cs16:ammo/<gun_type>\
 Full stack: cs16:ammo/<gun_type>_stack\
 Or random: cs16:ammo, cs16:rifle, cs16:smg,cs16:pistol\
+
+## Unitialized weapon
+Mainly used for easying the crafting recipe.\
+data example of an unitialized gun: music_disc_5[minecraft:item_model="cs16:gun/m4a1",minecraft:custom_data={gun:{id:21,uid:-1}}]\
+general data music_disc_5[minecraft:item_model=<gun model>,minecraft:custom_data={gun:{id:<gun id>,uid:-1}}]\
+the item_model component is optional
 
 ## CONFIGURATIONS:
 
