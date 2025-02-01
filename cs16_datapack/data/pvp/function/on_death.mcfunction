@@ -1,5 +1,4 @@
 ride @s dismount
-execute if entity @s[tag=this] run return run kill @s
 tag @s add respawn_cooldown
 tag @s[gamemode=survival] add survival
 tag @s[gamemode=adventure] add adventure

@@ -1,1 +1,1 @@
-execute if entity @s[tag=pvp] run function pvp:on_death
+execute if entity @s[tag=!this] run function pvp:on_death
