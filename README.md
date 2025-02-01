@@ -1,1 +1,52 @@
-# cs16-weapons-datapack
+If you want to add something or suggest ideas for new features
+
+## Introduction
+This datapack tries to copy the feel of Counter Strike 1.6.
+While the basic weapons will comply with the feel of cs1.6, I will add other weapons that will be completely different in feel.
+
+## Changes upragding the datapack to 1.21.4
+Summary:
+The datapack was initially made on 1.19.4 on a server with different pvp gamemodes, a lot of handling was done by the cs16 datapack instead of the games.
+Now the this datapack is a standalone version. No "api's" or "handlers" for redirecting damage, what happends when a player dies, etc.
+
+The datapack will just work once you put it in your world. Right now it is not survival friendly since you can not craft any guns or ammo.
+
+### Removed old bullet storage mechanic:
+Now all ammo is in item form stored in player inventory.\
+Damage scaling on guns removed( the player health was seen as from 0..100 instead of 0..20)
+
+### Loot Tables:
+Guns are separated by type and you can get one by typing:
+- loot give @s cs16:gun/<gun_type>/<gun_name>
+- eg. loot give @s cs16:gun/rifle/m4a1
+
+Getting ammo:
+loot give @s loot cs16:ammo/<gun_type>\
+Full stack: cs16:ammo/<gun_type>_stack\
+Or random: cs16:ammo, cs16:rifle, cs16:smg,cs16:pistol\
+
+## Unitialized weapon
+Mainly used for easying the crafting recipe.\
+data example of an unitialized gun: music_disc_5[minecraft:item_model="cs16:gun/m4a1",minecraft:custom_data={gun:{id:21,uid:-1}}]\
+general data music_disc_5[minecraft:item_model=<gun_model>,minecraft:custom_data={gun:{id:<gun_id>,uid:-1}}]\
+the item_model component is optional
+
+## CONFIGURATIONS:
+
+use /function cs16:config for text gui
+
+$preventDeath: 0 or 1 (1 - prevents the gun damage from killing the player, instead the player will run function cs16:redirect_on_death)\
+- There is a demo in pvp namepsace, where the player instead of being killed is put in spectator mode, spectating a block display following the player who killed him.( Just like in cs1.6)
+
+$gunRange 0..1024 <> 1024 By default\
+- :⚠️ The raytracing may run a lot of commands depending on gun stats. So the raytrace may reach maxCommandChainLength.\
+### $gunGrief
+- 0: guns won't break blocks( depending on block_pen stat)
+- 1: guns will break blocks
+- How gun grief works:\ There are 3 block tags: immune( blocks cannot get destroyed by weapons), hard( Health of 1000 hit points) and soft(120 hit points). If the block is not found is those tags is considered a normal block witch has 450 hit points. Each gun has a block_pen score, this determines how much damage it deals to each block.  
+### $wallbang 0 or 1( 1-thru wall damage)\
+- 0 The bullet will stop at the first block hit.
+- 1 The bullet will pass thru blocks halfing it's damage
+### $transform_item_to_display 0 or 1( converts gun items to item displays and can be only be picked up by pressing shift near it)
+
+
