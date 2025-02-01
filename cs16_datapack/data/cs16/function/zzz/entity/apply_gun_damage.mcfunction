@@ -1,0 +1,1 @@
+$damage @s $(value) cs16:gun by @a[tag=this,limit=1]

@@ -1,0 +1,56 @@
+[
+	{
+		"function": "minecraft:toggle_tooltips",
+		"toggles": {
+			"minecraft:attribute_modifiers": false
+		}
+	},
+	{
+		"function": "minecraft:set_components",
+		"components": {
+			"!jukebox_playable": {},
+			"item_name": "{\"text\":\"Sniper [F to shoot]\",\"color\":\"aqua\",\"italic\":false}",
+			"lore": [
+				"[{\"text\":\"[PRESS F TO SHOOT]\",\"italic\":false,\"bold\":true,\"color\":\"gold\"}]"
+			],
+			"item_model": "cs16:gun/awp",
+			"enchantable": {
+				"value": 1
+			},
+			"minecraft:dyed_color": {
+				"rgb": 0,
+				"show_in_tooltip": false
+			}
+		}
+	},
+	{
+		"function": "minecraft:set_custom_data",
+		"tag": {
+			"cs16_init": true,
+			"gun": {
+				"rifle": true,
+				"reloadTime": 50,
+				"primary": true,
+				"uid": -1,
+				"isGun": true,
+				"name": "Shnaiper",
+				"recoilXZ": 6,
+				"recoilY": 5,
+				"id": 30,
+				"fire_rate": 0,
+				"block_pen": 16,
+				"range_modifier": 0.8,
+				"bullets": 0,
+				"magazine_capacity": {
+					"bullets": 10,
+					"total_bullets": 60
+				},
+				"damage": {
+					"head": 90,
+					"chest": 28,
+					"legs": 16
+				}
+			}
+		}
+	}
+]

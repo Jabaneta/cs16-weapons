@@ -1,0 +1,3 @@
+$summon minecraft:item ~ ~ ~ {Invulnerable:1b,Item:{id:"stone_button",Count:1b,components:{"minecraft:max_stack_size":1}},Passengers:[{id:"minecraft:item_display",teleport_duration:2,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0.0f,0.0f,0.0f],scale:[1.5f,1.5f,1.5f]},Tags:["grenade"],item:{id:"minecraft:music_disc_5",count:1,components:{item_model:"cs16:grenade"}}}],PickupDelay:9999,Motion:[$(x)d,$(y)d,$(z)d],Tags:["grenade","new"],Age:0}
+data modify entity @n[type=item,tag=new] Thrower set from entity @s UUID
+execute as @e[type=item,tag=new,limit=1,sort=nearest] run function cs16:zzz/grenade/init

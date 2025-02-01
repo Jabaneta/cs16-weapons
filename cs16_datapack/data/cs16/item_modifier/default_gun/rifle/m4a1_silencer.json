@@ -1,0 +1,80 @@
+[
+	{
+		"function": "minecraft:toggle_tooltips",
+		"toggles": {
+			"attribute_modifiers": true
+		}
+	},
+	{
+		"function": "minecraft:set_attributes",
+		"modifiers": [
+			{
+				"id": "cs16:no_bob",
+				"attribute": "minecraft:attack_speed",
+				"amount": -999999,
+				"operation": "add_value",
+				"slot": "mainhand"
+			}
+		],
+		"replace": true
+	},
+	{
+		"function": "minecraft:set_components",
+		"components": {
+			"!jukebox_playable": {},
+			"item_name": "{\"text\":\"Maverick M4A1 Carbine [M4]\",\"color\":\"aqua\",\"italic\":false}",
+			"lore": [
+				"{\"text\":\"Shift + Q to put/remove silencer\",\"color\":\"white\",\"italic\":false}",
+				"[{\"text\":\"[PRESS F TO RELOAD]\",\"italic\":false,\"bold\":true,\"color\":\"gold\"}]"
+			],
+			"item_model": "cs16:gun/m4a1_silencer",
+			"minecraft:food": {
+				"nutrition": 1,
+				"saturation": 1,
+				"can_always_eat": true
+			},
+			"minecraft:consumable": {
+				"consume_seconds": 999999
+			},
+			"enchantable": {
+				"value": 1
+			},
+			"minecraft:dyed_color": {
+				"rgb": 0,
+				"show_in_tooltip": false
+			}
+		}
+	},
+	{
+		"function": "minecraft:set_custom_data",
+		"tag": {
+			"cs16_init": true,
+			"gun": {
+				"rifle": true,
+				"silencer": true,
+				"reloadTime": 54,
+				"primary": true,
+				"uid": -1,
+				"isGun": true,
+				"name": "M4",
+				"recoilXZ": 3,
+				"recoilY": 3,
+				"recoil_delay": 2,
+				"id": 21,
+				"fire_rate": 2,
+				"block_pen": 8,
+				"range_modifier": 0.7,
+				"bullets": 0,
+				"magazine_capacity": {
+					"bullets": 30,
+					"total_bullets": 90
+				},
+				"damage": {
+					"head": 23,
+					"chest": 10,
+					"legs": 4
+				}
+			}
+		}
+	}
+]
